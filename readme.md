@@ -4,7 +4,7 @@
 
 ### init:
 - liest wichtige Parameter ein (Modus, Phasenzahl, Nennspannung, Nennstrom)
- + Modus: 'stardelta' Stern-Dreieck Anlauf
+	+ Modus: 'stardelta' Stern-Dreieck Anlauf
 - initialisiert Modus und Maschine
 
 ### readData:
