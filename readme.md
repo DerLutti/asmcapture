@@ -8,6 +8,8 @@
 		* 'stardelta' Stern-Dreieck Anlauf
 		* 'startup' normale Messung, fährt Maschine nach Messung herunter
 - initialisiert Modus und Maschine
+	+ startet Maschine
+	+ startet Messung
 
 ### readData:
 - liest Daten von Messgeräten ein 
