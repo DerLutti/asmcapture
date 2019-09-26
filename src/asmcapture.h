@@ -17,8 +17,8 @@ public:
 	readData();
 
 private:
-
-
+	readJSON();	//die JSON einlesen 
+	writeJSON();
 };
 
 #endif //asmcapture.h
