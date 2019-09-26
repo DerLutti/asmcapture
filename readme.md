@@ -60,7 +60,7 @@ Der dritte Punkt ist während die Maschine hochfahrt
 - unterteilt den Sinus nach Timestamp
 - return timestamp start1, stop1, start2, stop2, start1, stop1
 
-### getPosWave
+#### getPosWave
 - kriegt von splitSine params
 - schaut wann >0
 - schaut wann steigt
