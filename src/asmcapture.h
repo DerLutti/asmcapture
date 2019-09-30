@@ -17,8 +17,15 @@ public:
 	readData();
 
 private:
-	readJSON();	//die JSON einlesen 
-	writeJSON();
+	readJSON(char* PATH_TO_FILE);	//die JSON einlesen 
+	writeJSON(char* PATH_TO_FILE, char[] toWrite);
+	writeJSON(char* PATH_TO_FILE, impData[] toWrite);
+
+	struct impData {
+		double U;
+		double I;
+		unsigned int time;
+	};
 };
 
 #endif //asmcapture.h
