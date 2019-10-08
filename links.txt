@@ -1,1 +1,2 @@
 https://raspberry-projects.com/pi/programming-in-c/json/rapidjson
+https://de.cppreference.com/w/cpp/container/list
