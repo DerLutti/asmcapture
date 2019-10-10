@@ -15,17 +15,20 @@ create date 3.10.2019
 //hier  zusätzliche libs hinzufügen
 #include <chrono>		/* timestamp */
 #include <stdio.h>      /* printf */
-#include <math.h>       /* sqrt */
+#include <math.h>		/* sqrt */
+#include <list>			/*list*/
+#include <rapidjson/writer.h> /*JSON*/
 
 class ASM {
 public:
 
-	void ASM(enum mode, uint8_t  phasenr, uint8_t nvoltage, uint8_t ncurrent ); //verbinden mit Schnittstelle und initialisierung
+	void ASM(enum mode, uint8_t  phasenr, uint16_t nvoltage, uint16_t ncurrent, uint8_t frequency ); //verbinden mit Schnittstelle und initialisierung
 	void readData(); //liest Daten vom Messgerät ein und schreibt Daten in JSON Dokument
 	void processData(); //liest Daten von JSON rechnet Daten und schreibt in JSON Dokument
 	void getResult(); //liest Daten von JSON und gibt sie aus
 private:
-	void structData(uint16_t current, uint16_t voltage, uint32_t timestamp); //Strom, Spannung, timestamp
+	void saveData(uint16_t current, uint16_t voltage, uint32_t timestamp, uint16_t p, uint16_t q, uint16_t s); //Strom, Spannung, timestamp , p, q, s
+	void saveData(uint16_t current, uint16_t voltage, uint32_t timestamp); //Strom, Spannung, timestamp
 	uint16_t _readJSON(); //von JSON Datei lesen
 	void writeJSON(); //in JSON Datei schreiben
 	uint16_t _getData(); //liest Daten von Messgerät ein.
