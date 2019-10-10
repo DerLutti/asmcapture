@@ -16,8 +16,15 @@ create date 3.10.2019
 #include <chrono>		/* timestamp */
 #include <stdio.h>      /* printf */
 #include <math.h>		/* sqrt */
-#include <list>			/*list*/
-#include <rapidjson/writer.h> /*JSON*/
+#include <list>			/* list */
+#include <fstream>		/* Filestream */
+#include <string>		/* working with string */
+
+//JSON stuff
+#include "rapidjson/writer.h" /*JSON write*/
+#include "rapidjson/reader.h" /*JSON read*/
+#include "rapidjson/stringbuffer.h" /*JSON buffer*/
+
 
 class ASM {
 public:
