@@ -27,17 +27,10 @@ public:
 	void processData(); //liest Daten von JSON rechnet Daten und schreibt in JSON Dokument
 	void getResult(); //liest Daten von JSON und gibt sie aus
 private:
-<<<<<<< HEAD
 	readJSON(char* PATH_TO_FILE);	//die JSON einlesen 
 	writeJSON(char* PATH_TO_FILE, char[] toWrite);
 	writeJSON(char* PATH_TO_FILE, impData[] toWrite);
 
-	struct impData {
-		double U;
-		double I;
-		unsigned int time;
-	};
-=======
 	void saveData(uint16_t current, uint16_t voltage, uint32_t timestamp, uint16_t p, uint16_t q, uint16_t s); //Strom, Spannung, timestamp , p, q, s
 	void saveData(uint16_t current, uint16_t voltage, uint32_t timestamp); //Strom, Spannung, timestamp
 	uint16_t _readJSON(); //von JSON Datei lesen
@@ -47,7 +40,12 @@ private:
 	void stardelta(); //sterndreieck anlauf
 	uint8_t _calculateangle(uint32_t currentpeaktimestamp, uint32_t voltagepeektimestamp); //berechnet winkel
 	uint8_t _frequency;
->>>>>>> d319cd45ee37984f86dfe82e603e540259a599de
+
+	struct impData {
+		double U;
+		double I;
+		unsigned int time;
+	};
 };
 
 #endif //asmcapture.h
