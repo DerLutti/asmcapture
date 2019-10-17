@@ -18,7 +18,7 @@ int main()
 	printf(json);
 	
 	//assert(doc.isObject);
-	f//or (Value::ConstValueIterator itr = a.Begin(); itr != a.End(); ++itr)
+	//for (Value::ConstValueIterator itr = a.Begin(); itr != a.End(); ++itr)
 	//	printf("%d ", itr->GetInt());
 	return 0;
 }
