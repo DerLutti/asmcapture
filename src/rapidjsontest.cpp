@@ -30,7 +30,7 @@ int main()
 		const Value& attribute = *itr;
 		assert(attribute.IsObject()); // each attribute is an object
 		for (Value::ConstMemberIterator itr2 = attribute.MemberBegin(); itr2 != attribute.MemberEnd(); ++itr2) {
-			cout << itr2->name.GetString() << " : " << itr2->value.GetString() << endl;
+			printf(itr2->name.GetString() + " : " + itr2->value.GetString());
 		}
 	}
 
