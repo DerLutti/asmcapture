@@ -9,16 +9,30 @@
 using namespace rapidjson;
 using namespace std;
 
-const char* json = "{\"hello\": \"world\",\"t\" : true,\"f\" : false,\"n\" : null,\"i\" : 123,\"pi\" : 3.1416,\"a\" : [1, 2, 3, 4]}";
+const char* json = "{\"a\" : [{\"b\":123, \"c\":\"asd\"}, {\"b\":123, \"c\":\"asd\"}, {\"b\":123, \"c\":\"asd\"}, {\"b\":123, \"c\":\"asd\"}]}";
+
+struct idc {
+	int b,
+	int c
+};
 
 int main() 
 {
-	//Document doc;
-	//doc.Parse(json);
 	printf(json);
-	
-	//assert(doc.isObject);
-	//for (Value::ConstValueIterator itr = a.Begin(); itr != a.End(); ++itr)
-	//	printf("%d ", itr->GetInt());
+	Document doc;
+	doc.Parse(json);
+	assert(doc.isObject);
+	const Value& a = document["a"];
+	assert(a.IsArray);
+
+	for (Value::ConstValueIterator itr = a.Begin(); itr != a.End(); ++itr)
+	{
+		const rapidjson::Value& attribute = *itr;
+		assert(attribute.IsObject()); // each attribute is an object
+		for (rapidjson::Value::ConstMemberIterator itr2 = attribute.MemberBegin(); itr2 != attribute.MemberEnd(); ++itr2) {
+			std::cout << itr2->name.GetString() << " : " << itr2->value.GetString() << std::endl;
+		}
+	}
+
 	return 0;
 }
