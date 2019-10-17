@@ -13,8 +13,8 @@ const char* json = "{\"hello\": \"world\",\"t\" : true,\"f\" : false,\"n\" : nul
 
 int main() 
 {
-	Document doc;
-	doc.Parse(json);
+	//Document doc;
+	//doc.Parse(json);
 	printf(json);
 	
 	//assert(doc.isObject);
