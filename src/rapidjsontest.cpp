@@ -4,6 +4,7 @@
 #include "rapidjson/writer.h" /*JSON write*/
 #include "rapidjson/reader.h" /*JSON read*/
 #include "rapidjson/stringbuffer.h" /*JSON buffer*/
+#include "rapidjson/document.h"
 
 using namespace rapidjson;
 using namespace std;
