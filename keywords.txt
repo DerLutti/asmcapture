@@ -1,27 +1,30 @@
 #######################################
-# Syntax Coloring Map For AsyncDelay
+# Syntax Coloring Map For ASM
 #######################################
 
 #######################################
 # Datatypes (KEYWORD1)
 #######################################
 
-AsyncDelay	KEYWORD1
+ASM	KEYWORD1
 
 #######################################
 # Methods and Functions (KEYWORD2)
 #######################################
 
-isExpired	KEYWORD2
-start		KEYWORD2
-repeat		KEYWORD2
-expire		KEYWORD2
-getDelay	KEYWORD2
-getExpiry	KEYWORD2
+ReadData	KEYWORD2
+processData	KEYWORD2
+getResult	KEYWORD2
+getData		KEYWORD2
+saveData	KEYWORD2
+readJSON	KEYWORD2
+writeJSON	KEYWORD2
+calculateangle	KEYWORD2
+getPosWave	KEYWORD2
 
 
 #######################################
 # Constants (LITERAL1)
 #######################################
-MICROS	LITERAL1
-MILLIS	LITERAL1
+
+
