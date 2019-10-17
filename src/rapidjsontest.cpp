@@ -27,10 +27,10 @@ int main()
 
 	for (Value::ConstValueIterator itr = a.Begin(); itr != a.End(); ++itr)
 	{
-		const rapidjson::Value& attribute = *itr;
+		const Value& attribute = *itr;
 		assert(attribute.IsObject()); // each attribute is an object
-		for (rapidjson::Value::ConstMemberIterator itr2 = attribute.MemberBegin(); itr2 != attribute.MemberEnd(); ++itr2) {
-			std::cout << itr2->name.GetString() << " : " << itr2->value.GetString() << std::endl;
+		for (Value::ConstMemberIterator itr2 = attribute.MemberBegin(); itr2 != attribute.MemberEnd(); ++itr2) {
+			cout << itr2->name.GetString() << " : " << itr2->value.GetString() << endl;
 		}
 	}
 
