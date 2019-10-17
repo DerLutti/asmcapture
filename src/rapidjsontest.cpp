@@ -22,12 +22,12 @@ int main()
 	Document doc;
 	doc.Parse(json);
 	assert(doc.IsObject);
-	const Value& a = doc["a"];
+	Value& a = doc["a"];
 	assert(a.IsArray);
 
 	for (Value::ConstValueIterator itr = a.Begin(); itr != a.End(); ++itr)
 	{
-		const Value& attribute = *itr;
+		Value& attribute = *itr;
 		assert(attribute.IsObject()); // each attribute is an object
 		for (Value::ConstMemberIterator itr2 = attribute.MemberBegin(); itr2 != attribute.MemberEnd(); ++itr2) {
 			printf(itr2->name.GetString());
