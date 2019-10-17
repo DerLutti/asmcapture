@@ -8,10 +8,14 @@
 using namespace rapidjson;
 using namespace std;
 
-string json = "{\"hello\": \"world\",\"t\" : true,\"f\" : false,\"n\" : null,\"i\" : 123,\"pi\" : 3.1416,\"a\" : [1, 2, 3, 4]}"
+string json = "{\"hello\": \"world\",\"t\" : true,\"f\" : false,\"n\" : null,\"i\" : 123,\"pi\" : 3.1416,\"a\" : [1, 2, 3, 4]}";
 
 int main() 
 {
-	
+	Document doc;
+	doc.Parse(json);
+	assert(doc.isObject);
+	for (Value::ConstValueIterator itr = a.Begin(); itr != a.End(); ++itr)
+		printf("%d ", itr->GetInt());
 	return 0;
 }
