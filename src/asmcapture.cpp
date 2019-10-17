@@ -102,12 +102,13 @@ readJSON
 liest aus der JSON Dateien ein
 return Array von Strukturen
 return String*/
-std::List<ASM::impData> ASM::_readJSON(std::string PATH_TO_FILE, std::string arrayName) {
+std::list<ASM::impData> ASM::_readJSON(std::string PATH_TO_FILE, std::string arrayName) {
 	//TODO: getFile to Buffer
 	using namespace std;
 	ifstream inputFile(PATH_TO_FILE);
 	stringstream jsonDocumentBuffer;
 	string inputLine;
+	list<ASM::impData> ret;
 
 	while (getline(inputFile, inputLine))
 	{
@@ -125,6 +126,7 @@ std::List<ASM::impData> ASM::_readJSON(std::string PATH_TO_FILE, std::string arr
 	{
 		const rapidjson::Value& vals = *itr;
 		assert(vals.IsObject()); // each attribute is an object
+		list.push_back(vals) //iterator
 		for (rapidjson::Value::ConstMemberIterator itr2 = vals.MemberBegin(); itr2 != vals.MemberEnd(); ++itr2)
 		{
 			//TODO: dont writeout write to List

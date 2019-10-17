@@ -35,7 +35,7 @@ public:
 	void getResult(); //liest Daten von JSON und gibt sie aus
 private:
 	readJSON(char* PATH_TO_FILE);	//die JSON einlesen 
-	writeJSON(char* PATH_TO_FILE, char[] toWrite);
+	writeJSON(char* PATH_TO_FILE, std::string toWrite);
 	writeJSON(char* PATH_TO_FILE, impData[] toWrite);
 
 	void saveData(uint16_t current, uint16_t voltage, uint32_t timestamp, uint16_t p, uint16_t q, uint16_t s); //Strom, Spannung, timestamp , p, q, s
