@@ -26,6 +26,12 @@ create date 3.10.2019
 #include "rapidjson/stringbuffer.h" /*JSON buffer*/
 
 
+#include <libmcp3204.h>
+
+#include <fstream>
+
+#define ADS_ADDR 0x48
+
 class ASM {
 public:
 
@@ -47,12 +53,20 @@ private:
 	void stardelta(); //sterndreieck anlauf
 	uint8_t _calculateangle(uint32_t currentpeaktimestamp, uint32_t voltagepeektimestamp); //berechnet winkel
 	uint8_t _frequency;
+<<<<<<< HEAD
 
 	struct impData {
 		double U;
 		double I;
 		unsigned int time;
 	};
+=======
+	//GPIO
+	uint8_t NS = 22;
+	uint8_t SS = 23;
+	uint8_t DS = 24;
+
+>>>>>>> d02feee289320c5587c2806361bf491fae151b97
 };
 
 #endif //asmcapture.h

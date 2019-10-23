@@ -19,11 +19,32 @@ startet Maschine
 startet Messung*/
 void ASM::ASM(enum mode, uint8_t  phasenr, uint8_t nvoltage, uint8_t ncurrent, uint8_t frequency) {
 	_frequency = frequency;
+	//setup the pins as outputs
+	GPIO.setup(_NS, GPIO.OUT);
+	GPIO.setup(_SS, GPIO.OUT);
+	GPIO.setup(_DS, GPIO.OUT);
 	if (mode = stardelta) {
 		stardelta();
+<<<<<<< HEAD
 	}else if(mode = startup){
 
 	}
+=======
+}else if(mode = startup){
+	GPIO.output(_NS, GPIO.HIGH);
+	GPIO.output(_DS, GPIO.HIGH);
+}
+>>>>>>> d02feee289320c5587c2806361bf491fae151b97
+}
+
+/*	stardelta
+regelt den einschaltvorgang für stern-dreieck*/
+void ASM::stardelta() {
+	GPIO.output(_NS, GPIO.HIGH);
+	GPIO.output(_SS, GPIO.HIGH);
+	//pm:wait ka for wos
+	GPIO.output(_SS, GPIO.LOW);
+	GPIO.output(_DS, GPIO.HIGH);
 }
 
 /*readData:
@@ -38,8 +59,8 @@ void ASM::readData() {
 	uint16_t voltage;
 
 	timestamp = duration_cast<milliseconds>(system_clock::now().time_since_epoch());
-	current = getData(i);	//wert auslesen
-	voltage = getData(u);
+	current = _getData(i);	//wert auslesen
+	voltage = _getData(u);
 
 	structData(current,voltage,timestamp);
 }
@@ -83,9 +104,26 @@ liest die Werte aus der JSON Datei aus
 gibt die Werte in die Konsole aus
 (zeichnet einen Osanna Kreis)*/
 void ASM::getResult() {
-
-
-
+	printf("U: "_readJSON());
+	printf("Uscheitel: "_readJSON());
+	printf("I: "_readJSON());
+	printf("Ischeitel: "_readJSON());
+	printf("Phasenverschiebung: "_readJSON());
+	printf("P: "_readJSON());
+	printf("Q: "_readJSON());
+	printf("S: "_readJSON());
+	
+	//Textdatei oder so ausgeben
+	ofstream file("speicher.txt");
+	file << "U: " << _readJSON() << '\n'
+		<< "Uscheitel: " << _readJSON() << '\n'
+		<< "I: " << _readJSON() << '\n'
+		<< "Ischeitel: " << _readJSON() << '\n'
+		<< "Phasenverschiebung: " << _readJSON() << '\n'
+		<< "P: " << _readJSON() << '\n'
+		<< "Q: " << _readJSON() << '\n'
+		<< "S: " << _readJSON() << '\n'
+		<< endl;
 }
 
 /*struct Data
@@ -178,10 +216,25 @@ void ASM::writeJSON(std::string PATH_TO_JSON, std::string arrayName, std::List<A
 /*getData
 liest Daten von dem Messgerät ein
 formatiert Daten als Struktur Data*/
+<<<<<<< HEAD
 uint16_t ASM::_getData(char16_t mode) {
 	uint16_t data=0;
 	if (mode = u) {
 		data = 0;
+=======
+	uint16_t ASM::_getData(char16_t mode) {
+		int fd;
+		MCP3204 ADC;
+		char error[20];
+		MCP3204_init(&fd, "/dev/spidev0.1", &ADC, mode_SPI_00, 2.491, error);
+		if (mode = u) {
+			MCP3204_convert(fd, singleEnded, CH0, &ADC, error);
+		}
+		else if (mode = i) {
+			MCP3204_convert(fd, singleEnded, CH1, &ADC, error);
+		}
+		return MCP3204_analogValue(ADC); //returns the analog value of the input
+>>>>>>> d02feee289320c5587c2806361bf491fae151b97
 	}
 	else if (mode = i) {
 		data = 0;
@@ -190,6 +243,7 @@ uint16_t ASM::_getData(char16_t mode) {
 }
 
 /*getPosWaveTs
+<<<<<<< HEAD
 soll alle timestamps einer postiven halbenn periodendauer ausgeben*/
 uint16_t ASM::_getPosWaveTs() {
 		
@@ -200,6 +254,20 @@ regelt den einschaltvorgang für stern-dreieck*/
 void ASM::stardelta() {
 
 }
+=======
+soll alle timestamps einer postiven halben periodendauer ausgeben*/
+	uint16_t ASM::_getPosWaveTs() {
+		uint8_t toleranz = 5;
+		while ((_readJSON(TSaktuell)-_readJSON(TS0))<20)
+		{
+			if ((Wert > toleranz) || (Wert < toleranz)) 
+			{
+				writeJSON(U I und TS);
+			}
+		}
+		return 1;
+	}
+>>>>>>> d02feee289320c5587c2806361bf491fae151b97
 
 /*calculateangle:
 berechnet winkel aus Ts*/
