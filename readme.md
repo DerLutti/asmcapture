@@ -2,8 +2,8 @@
 
 Das Programm fährt eine ASM hoch, misst Strom und Spannung und gibt den Osanna Kreis der ASM aus.
 Es gibt eine Einstellung bei dem das Programm die Maschine in Stern-Dreieck hochfährt
-Der Kurzschlusspunkt ist in den ersten 100 ms, während die Maschine anläuft
-Der Leerlaufpunkt ist nachdem die Maschine hochgefahren ist
+Der erste Punkt ist in den ersten 100 ms, während die Maschine anläuft
+Der zweite Punkt ist nachdem die Maschine hochgefahren ist
 Der dritte Punkt ist während die Maschine hochfahrt
 
 ## Klasse asm:
@@ -11,69 +11,55 @@ Der dritte Punkt ist während die Maschine hochfahrt
 ### public:
 
 #### init:
-- liest wichtige Parameter ein (Modus, Phasenzahl, Nennspannung, Nennstrom)
+- liest wichtige Parameter ein (Modus, Frequenz)
 	+ Modus: 
 		* 'stardelta' Stern-Dreieck Anlauf
 		* 'startup' normale Messung, fährt Maschine nach Messung herunter
 - initialisiert Modus und Maschine
 	+ startet Maschine
-	+ startet Messung
-
-#### readData:
-- liest Daten von Messgeräten ein 
-- formatiert Daten als Array von Strukturen (Zeit, Strom, Spannung)
-- schreibt Daten in ein JSON Dokument
+	+ ruft readData auf
 
 #### processData:
-
-- liest Daten von einem JSON Dokument //muss das immer in der Funktion passieren?
-					reicht nicht die direkte Übergabe mit readJSON?
-
-- rechnet den Scheitelwert des Sinus und die Phasenverschiebung des Sinus aus (3 mal für 3 verschiedene Punkte)
-- rechnet mit dem Scheitelwert den Effektivwert aus
-- (rechnet P,Q und S aus)
-- schreibt die errechneten Daten in eine JSON Datei
+- ruft splitSine, getPosWave und getParams auf
 
 #### getResult: 
-- liest die Werte aus der JSON Datei aus
 - gibt die Werte in die Konsole aus
-- (zeichnet einen Osanna Kreis)
+- (gibt die Werte in eine Textdatei aus)
 
 ### private:
 
+#### outParams (Struktur?)
+- beinhaltet Strom und Phasenverschiebung der drei Punkte (U ist egal bei Kreis)
+
+#### inParams (Liste von impData)
+- wird als Pointer verwendet um immer auf den gleichen Speicherplatz zuzugreifen
+- falls die Liste zu lang in txt oder so schreiben
+
+#### readData:
+- liest Daten von den Messgeräten ein
+	+ misst nicht kontinuierlich um Speicher zu verringern (alle 500 ms für 100 ms oder so)
+- formatiert Daten als Liste von Strukturen (impData)
+- speichert Daten als Liste
+
 #### impData (struct)
-- hat Strom (double), Spannung (double) und Time (uint)
+- hat Strom (double), Spannung (double) und Zeitstempel(uint)
 
-#### readJSON
-- liest aus der JSON Dateien ein 
-- return Array von Strukturen
-- return String
-
-#### writeJSON 
-- param: String, Array (overload)
-- schreibt String bzw Array in eine JSON
-- return null
-
-#### getData
-- liest Daten von dem Messgerät ein 
-- formatiert Daten als Struktur Data
-
-#### splitSine
-- liest Daten von JSON ein
-- unterteilt den Sinus nach Timestamp
-- return timestamp start1, stop1, start2, stop2, start1, stop1
+#### splitSine 
+- unterteilt Sinus in drei Zeitfenster
+	+ Zeitfenster 1: Ganz am Anfang 
+	+ Zeitfenster 2: Irgendwann mittig (möglicherweise berechnen um genauer Mitte zu finden)
+	+ Zeitfenster 3: Am Ende wenn die Maschine hochgefahren ist
+- mit jedem Zeitfenster wird getPosWave aufgerufen  
 
 #### getPosWave
-- kriegt von splitSine params
+- Liste von Strukturen als Param
 - schaut wann >0
-- schaut wann steigt
-- schaut ob volle Halbwelle
-- return Array pos Welle
+- schaut ob steigt
+- bei Strom ~ 0 ist die Welle vorbei
+- return max in dem Zeitfenster und deltaT vom Nulldurchgang
 
 #### getParams
 - kriegt Daten von getPosWave
-- rechnet Frequenz aus
 - rechnet Phasenverschiebung (Delta Nulldurchgang) mit f aus
-- berechnet peak mit eine positive Halbwelle suchen und von der das Max ist peak
 - berechnet Effektivwert aus Peak
 - return Effektivwert I, U, Phi
