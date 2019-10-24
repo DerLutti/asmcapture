@@ -6,6 +6,11 @@ Der erste Punkt ist in den ersten 100 ms, während die Maschine anläuft
 Der zweite Punkt ist nachdem die Maschine hochgefahren ist
 Der dritte Punkt ist während die Maschine hochfahrt
 
+## Momentanes Programm 
+- die .h ist einigermaßen annehmbar
+- die .cpp funktioniert keineswegs und ist unbrauchbar
+- beste Lösung wäre das Projekt neu anzulegen und die readme zu kopieren
+
 ## Klasse asm:
 
 ### public:
