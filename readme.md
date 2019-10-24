@@ -41,7 +41,7 @@ Der dritte Punkt ist während die Maschine hochfahrt
 
 ### private:
 
-#### struct Data
+#### impData (struct)
 - hat Strom (double), Spannung (double) und Time (uint)
 
 #### readJSON
