@@ -1,0 +1,18 @@
+Raspberry anschrauben
+Platine für ADU etc ätzen und anschrauben?
+Mit Alten Festplatten kabel von Raspi zu ADU
+HUtschiene für schütz 
+Kabelkanäle ??
+
+Not aus Beschriftung
+https://www.schrack.at/shop/catalog/product/view/id/34529/category/3183056/
+
+Drucktaster
+https://at.rs-online.com/web/p/drucktaster-schalter/3149300/
+https://www.schrack.at/shop/beleuchtung/led-flexstrips-profile-steuerungen-und-zubehoer/led-flexstrips-profile-steuerungen-und-zubehoer-serie-silver-line/zubehoer-led-flexstrips-serie-silver-line/taster-mini-m16-lizu020016.html
+
+Bananenbuchsen (12) müssen nicht bestellt werden
+
+PE Klemme für Erdung der Blackbox ?
+
+LCD-Display mit I2C 
