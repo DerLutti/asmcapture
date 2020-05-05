@@ -1,0 +1,95 @@
+Diese Ausführungen kann ich nicht ganz nachvollziehen, denn das hieße, 
+> dass sich die Schüler aller Laborgruppen - du mit eingeschlossen - 
+> während der Laborübungen darin geübt hätten, ständig sinnvolle Arbeit 
+> vorzutäuschen und in Wahrheit nichts zu erledigen. Sollte sich das 
+> bestätigen, was ich nicht glauben möchte, dann müsste das zu 
+> Konsequenzen bei der Notenkonferenz führen. Mir scheint es eher so zu 
+> sein, dass du (und auch Herr Mandl) etwas Überzeugungsarbeit bei den 
+> Klassenkameraden leisten musst, die gesammelten Unterlagen 
+> erforderlichenfalls fertigzustellen und herauszurücken. Der 
+> Arbeitsauftrag hat ja nicht gelautet, irgendein Programm zu erstellen, 
+> das zu nichts zu gebrauchen ist, sondern der Sinn und Zweck war absolut 
+> klar und eindeutig definiert und sowohl zeitliche als auch personelle 
+> Ressourcen waren für die Erledigung ausreichend.
+> 
+> MfG,
+> 
+> Rupert Hinterkircher
+> 
+> 
+> Am 01.05.20 um 19:05 schrieb "Lukas Kröll":
+> > Herr Mandl würde sich gerne am Projekt beteiligen um einen 3er zu 
+> > bekommen. Unsere Mitschüler haben eigentlich bis auf die Bestellliste 
+> > und einen Schaltplan nicht viel nachzuweisen. Müssen wir nun auch 
+> > Programmieren und die Ergebnisse simulieren, oder reicht eine 
+> > Zusammenfassung von der bisherigen Arbeit unserer Klasse. Denn vom 
+> > Programmcode her gibt es bis jetzt nichts sinnvolles.
+> > MfG,
+> > Lukas Kröll
+> >
+> > *Gesendet:* Donnerstag, 30. April 2020 um 19:39 Uhr
+> > *Von:* "Rupert Hinterkircher" <rupert.hinterkircher@htlweiz.at>
+> > *An:* "Lukas Kröll" <lukas.kroell@gmx.at>
+> > *Betreff:* Re: Noten ausbessern
+> >
+> > Die Note von Hr. Luttenberger wurde bereits unter besonderer 
+> > Berücksichtigung der Mitarbeit auf mit "befriedigend" eingestuft, eine 
+> > weitere Verbesserung wäre aufgrund der vorliegenden Punktezahl nicht 
+> > zu rechtfertigen. Bei Hr. Mandl wäre eine Verbesserung auf 
+> > "befriedigend" möglich, eine Beteiligung seinerseits am Projekt kann 
+> > ich entsprechend berücksichtigen. Eigentlich sollten aber bei jedem 
+> > Schüler der Klasse Unterlagen vorhanden sein, schließlich habe ich 
+> > während des Präsenzunterrichts die begleitende Dokumentation mehrfach 
+> > eingemahnt. Das Projekt wäre also in erster Linie eine ordnende 
+> > Zusammenfassung mit ergänzender Dokumentation. Ich hoffe in eurem 
+> > Interesse, dass eure Mitschüler bereitwillig alle notwendigen 
+> > Unterlagen zur Verfügung stellen.
+> >
+> > MfG,
+> >
+> > Rupert Hinterkircher
+> >
+> > Am 30.04.20 um 18:04 schrieb "Lukas Kröll":
+> >
+> >     Sehr geehrter Herr Professor,
+> >     ich wollte fragen ob meine Mitschüler Herr Luttenberger und Herr
+> >     Mandl mir bei diesem
+> >     Projekt helfen dürfen. Alleine ist dies nämlich sehr schwierig da
+> >     die aktuelle Lösung
+> >     von unserer Klasse nicht gerade gut ist. Herr Mandl möchte seine
+> >     Note gern auf einen
+> >     3er aufbessern und Herr Luttenberger auf einen 2er.
+> >     Würde das gehen, dass man zu dritt an diesem großen Projekt arbeitet?
+> >     Für die Abgabe schlage ich ca. 2 Wochen vor. (Also am 11.5.2020
+> >     wäre spätestens die Abgabe)
+> >     MfG
+> >     Lukas Kröll
+
+
+
+> Guten Tag!
+> 
+> Als Arbeit zur Notenverbesserung schlage ich folgendes vor: Erstellung 
+> der vollständigen Dokumentation der Ergebnisse des vertiefenden Labors, 
+> also Berechnungsalgorithmen + Software. Aus diesen soll der Vorgang der 
+> Rekonstruktion des Sinusverlaufs aus den Messwerten und Umrechnung in 
+> Zeigergrößen mit Betrag und Winkel nachvollziehbar und vollständig 
+> hervorgehen. Die Software soll als Programmlisting vorliegen. Dafür wird 
+> Zusammenfassung und Ergänzung der bisherigen Dokumentation erforderlich 
+> sein.
+> 
+> Bitte um Angabe, wann ich mit der Abgabe rechnen kann.
+> 
+> MfG,
+> 
+> Rupert Hinterkircher
+> 
+> Am 24.04.20 um 21:37 schrieb "Lukas Kröll":
+> > Sehr geehrter Herr Professor,
+> > ich wollte fragen, was ich noch tun müsste, um bei Ihnen in AT1
+> > einen 3er zu bekommen. Müsste ich noch ein Beispiel rechnen, oder
+> > eine Prüfung machen oder wär es sinnovoller wenn ich das Fach AT1
+> > für den Ergänzungsunterricht auswähle. Und wenn eine Prüfung notwendig
+> > wäre, welche Themenbereiche werden geprüft.
+> > MfG
+> > Lukas Kröll
